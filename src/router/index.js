@@ -39,13 +39,16 @@ const routes = [
         path: '*',
         redirect: '/404'
     }
-
 ]
 
 const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
-    routes
+    routes,
+    scrollBehavior() {
+        // всегда прокручивать до верха
+        return { top: 0 }
+    }
 })
 
 export default router
