@@ -93,4 +93,10 @@ export default {
     justify-content: center;
     align-items: center;
 }
+
+.design__card {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
 </style>

@@ -92,4 +92,11 @@ export default {
     justify-content: space-evenly;
     padding: 48px;
 }
+
+.design__card {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    flex-wrap: wrap;
+}
 </style>

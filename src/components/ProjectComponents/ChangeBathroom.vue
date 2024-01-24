@@ -1,13 +1,15 @@
 <template>
     <div>
-        <div class="design__card" v-for="{ id, img, text, header, date, arrow } in cards" :key="id">
-            <img class="design__img" :src="img" alt="design">
-            <p class="design__text">{{ text }}</p>
-            <h2 class="design__card__header">{{ header }}</h2>
-            <div class="design__card__bottom">
-                <p class="design__card__date">{{ date }}</p>
-                <router-link class="pages__contacts__text" to="/project-details"><img :src="arrow"
-                        alt="arrow"></router-link>
+        <div class="design__cards">
+            <div class="design__card" v-for="{ id, img, text, header, date, arrow } in cards" :key="id">
+                <img class="design__img" :src="img" alt="design">
+                <p class="design__text">{{ text }}</p>
+                <h2 class="design__card__header">{{ header }}</h2>
+                <div class="design__card__bottom">
+                    <p class="design__card__date">{{ date }}</p>
+                    <router-link class="pages__contacts__text" to="/project-details"><img :src="arrow"
+                            alt="arrow"></router-link>
+                </div>
             </div>
         </div>
 
@@ -83,4 +85,18 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.design__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    padding: 48px;
+    justify-content: center;
+    align-items: center;
+}
+
+.design__card {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+</style>

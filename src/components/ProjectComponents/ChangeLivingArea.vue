@@ -31,7 +31,7 @@ export default {
                 },
                 {
                     id: 2,
-                    img: require('../../assets/livingroom1.png'),
+                    img: require('../../assets/livingroom2.png'),
                     text: 'Living Area Design',
                     header: 'Let’s Get Solution For Building Construction Work',
                     date: '26 December,2022',
@@ -83,4 +83,18 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.design__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    padding: 48px;
+    justify-content: center;
+    align-items: center;
+}
+
+.design__card {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+</style>
