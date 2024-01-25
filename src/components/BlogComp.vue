@@ -30,33 +30,17 @@
             </section>
             <section class="blog__bottom__content center" id="app">
                 <h1 class="blog__bottom__content__header">Articles & News</h1>
-                <div class="blog__cards">
-                    <div class="design__card" v-for="{ id, img, text, header, date, arrow } in cards" :key="id">
-                        <img class="design__img" :src="img" alt="design">
-                        <p class="design__text">{{ text }}</p>
-                        <h2 class="design__card__header">{{ header }}</h2>
-                        <div class="design__card__bottom">
-                            <p class="design__card__date">{{ date }}</p>
-                            <router-link class="pages__contacts__text" to="/blog-details"><img :src="arrow"
-                                    alt="arrow"></router-link>
-                        </div>
-                    </div>
-                </div>
+
+                <component :is="changeTabs"></component>
                 <nav>
-                    <ul class="pagination">
-                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52"
+                    <ul id="1" class="pagination">
+                        <li @click="currentTab = num" v-for="num in nums" :key="num.id"><a href="#1"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52"
                                     fill="none">
                                     <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
-                                </svg><span class="pagination__number">01</span></a></li>
-                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52"
-                                    fill="none">
-                                    <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
-                                </svg><span class="pagination__number">02</span></a></li>
-                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52"
-                                    fill="none">
-                                    <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
-                                </svg><span class="pagination__number">03</span></a></li>
-                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52"
+                                </svg><span class="pagination__number">{{ num }}</span></a></li>
+
+                        <li><a href="#1"><svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52"
                                     fill="none">
                                     <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
                                     <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2"
@@ -72,11 +56,21 @@
 </template>
 
 <script>
+import BlogContent01 from './BlogComp/BlogContent01.vue'
+import BlogContent02 from './BlogComp/BlogContent02.vue'
+import BlogContent03 from './BlogComp/BlogContent03.vue'
 export default {
     name: 'BlogComp',
+    components: {
+        BlogContent01,
+        BlogContent02,
+        BlogContent03,
+    },
 
     data() {
         return {
+            nums: ['01', '02', '03'],
+            currentTab: '01',
             cards: [
                 {
                     id: 1,
@@ -137,6 +131,11 @@ export default {
     methods: {
 
     },
+    computed: {
+        changeTabs() {
+            return `BlogContent${this.currentTab}`
+        }
+    }
 };
 </script>
 

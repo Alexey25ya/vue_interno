@@ -80,5 +80,44 @@ export default {
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 376px);
+        padding-right: calc(50% - 376px);
+    }
+
+    .notfound {
+        padding-left: calc(50% - 376px);
+        display: flex;
+        gap: 81px;
+        align-items: center;
+        flex-direction: column;
+
+        &__img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .notfound {
+        gap: 40px;
+
+        &__title {
+            font-size: 150px;
+        }
+
+        &__text {
+            font-size: 20px
+        }
+    }
+
+}
 </style>
   

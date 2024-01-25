@@ -17,20 +17,20 @@
 
             </section>
             <nav>
-                <ul class="pagination">
-                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52"
-                                fill="none">
+                <ul id="1" class="pagination">
+                    <li @click="currentTab = 'Bathroom'"><a class="pagination__link" href="#1"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52" fill="none">
                                 <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
                             </svg><span class="pagination__number">01</span></a></li>
-                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52"
-                                fill="none">
+                    <li @click="currentTab = 'Bedroom'"><a href="#1"><svg xmlns="http://www.w3.org/2000/svg" width="53"
+                                height="52" viewBox="0 0 53 52" fill="none">
                                 <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
                             </svg><span class="pagination__number">02</span></a></li>
-                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52"
-                                fill="none">
+                    <li @click="currentTab = 'Kitchen'"><a href="#1"><svg xmlns="http://www.w3.org/2000/svg" width="53"
+                                height="52" viewBox="0 0 53 52" fill="none">
                                 <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
                             </svg><span class="pagination__number">03</span></a></li>
-                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52"
+                    <li><a href="#1"><svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52"
                                 fill="none">
                                 <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
                                 <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2"
