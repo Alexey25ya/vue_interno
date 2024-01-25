@@ -105,4 +105,35 @@ export default {
     /* 66px */
     letter-spacing: 0.22px;
 }
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 376px);
+        padding-right: calc(50% - 376px);
+    }
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .footer__bottom {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        padding-top: 96px;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer__bottom {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding-top: 50px;
+        flex-direction: column;
+    }
+}
 </style>

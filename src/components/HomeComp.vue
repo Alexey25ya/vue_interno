@@ -6,9 +6,9 @@
                     <h1 class="top__content__header">Let Your Home Be Unique</h1>
                     <p class="top__content__text">There are many variations of the passages of lorem Ipsum fromavailable
                         majority</p>
-                    <button class=" top__content__button"><span class="top__content__button__text">Get Starte</span> <span
-                            class="top__content__button__img"><img src="../assets/Vector.svg"
-                                alt="top__content__button__img"></span></button>
+                    <router-link to="/project" class=" top__content__button"><span class="top__content__button__text">Get
+                            Starte</span> <span class="top__content__button__img"><img src="../assets/Vector.svg"
+                                alt="top__content__button__img"></span></router-link>
                 </section>
                 <section class="mid__content__description">
                     <h1 class="mid__content__description__header">Follow Our Projects</h1>
@@ -162,7 +162,7 @@ export default {
     gap: 20px;
 
     &__header {
-        width: 433px;
+        max-width: 433px;
         color: #292F36;
         font-family: "DM Serif Display";
         font-size: 65px;
@@ -173,7 +173,7 @@ export default {
     }
 
     &__text {
-        width: 433px;
+        max-width: 433px;
         color: #4D5053;
         font-family: "Jost";
         font-size: 22px;
@@ -405,5 +405,112 @@ export default {
     left: 10%;
     border-radius: 8px 8px 8px 0px;
     background: #FFF;
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 376px);
+        padding-right: calc(50% - 376px);
+    }
+
+    .content__top {
+        width: 100%;
+        height: 600px;
+    }
+
+
+    .mid__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product__card {
+        margin-top: 50px;
+
+    }
+
+
+    .footer__mid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .top__content {
+        gap: 10px;
+
+        &__header {
+            font-size: 50px;
+            font-weight: 250;
+        }
+
+        &__text {
+            font-size: 16px;
+            font-weight: 250;
+        }
+
+        &__button {
+            &__text {
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+        }
+    }
+
+    .product__card {
+        margin-top: 50px;
+    }
+
+    .border-top-right-radius {
+        width: 100%;
+        border-top-right-radius: 50px;
+    }
+
+    .border-top-left-radius {
+        width: 100%;
+        border-top-left-radius: 50px;
+    }
+
+    .border-bottom-right-radius {
+        width: 100%;
+        border-bottom-right-radius: 50px;
+    }
+
+    .border-bottom-left-radius {
+        width: 100%;
+        border-bottom-left-radius: 50px;
+    }
+
+    .footer__top {
+        gap: 10px;
+
+
+        &__box {
+            gap: 16px;
+
+            &__quantity {
+                font-size: 40px;
+                font-weight: 250;
+            }
+
+            &__text {
+                font-size: 16px;
+                font-weight: 250;
+            }
+        }
+
+    }
+
+
 }
 </style>

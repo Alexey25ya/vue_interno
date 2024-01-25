@@ -80,4 +80,55 @@ export default {
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 376px);
+        padding-right: calc(50% - 376px);
+    }
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header {
+        &__left {
+            &__text {
+                font-size: 20px;
+                font-weight: 200;
+            }
+        }
+
+        &__right {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+
+            &__link {
+                font-size: 16px;
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .header {
+        &__right {
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &__link {
+                font-size: 16px;
+                font-weight: 200;
+            }
+        }
+    }
+
+}
 </style>

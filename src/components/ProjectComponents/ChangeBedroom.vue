@@ -1,18 +1,19 @@
 <template>
     <div>
-        <div class="design__cards">
+        <div class="design__cards center">
             <div class="design__card" v-for="{ id, img, text, header, date, arrow } in cards" :key="id">
                 <img class="design__img" :src="img" alt="design">
-                <p class="design__text">{{ text }}</p>
-                <h2 class="design__card__header">{{ header }}</h2>
-                <div class="design__card__bottom">
-                    <p class="design__card__date">{{ date }}</p>
+                <div class="design__card__content">
+                    <div class="design__card__content__discription">
+                        <p class="design__text">{{ text }}</p>
+                        <h2 class="design__card__header">{{ header }}</h2>
+                        <p class="design__card__date">{{ date }}</p>
+                    </div>
                     <router-link class="pages__contacts__text" to="/project-details"><img :src="arrow"
                             alt="arrow"></router-link>
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -98,5 +99,30 @@ export default {
     display: flex;
     flex-direction: column;
     padding-left: 30px;
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 376px);
+        padding-right: calc(50% - 376px);
+    }
+
+    .design__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
 </style>

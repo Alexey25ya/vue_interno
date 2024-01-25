@@ -9,7 +9,7 @@
             </section>
             <section class="blog__mid__content center">
                 <h1 class="blog__mid__content__header">Latest Post</h1>
-                <div class="blog__mid__content__box">
+                <div class="blog__mid__content__box center">
                     <img class="blog__mid__content__box__img" src="../assets/blog_latest_post.png" alt="photo">
                     <div class="blog__mid__content__box__right">
                         <h1 class="blog__mid__content__box__right__header">Low Cost Latest Invented Interior Designing Ideas
@@ -331,5 +331,55 @@ export default {
     font-weight: 500;
     line-height: 150%;
     text-transform: capitalize;
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 376px);
+        padding-right: calc(50% - 376px);
+    }
+
+    .blog__mid__content__header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .blog__mid__content__box {
+        display: flex;
+        align-items: center;
+        gap: 65px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .blog__mid__content__box {
+        &__img {
+            width: 100%;
+            border-radius: 50px;
+        }
+    }
+
+    .blog__bottom__content__header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .blog__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .design__card__bottom {
+        display: flex;
+        align-items: center;
+        gap: 150px;
+    }
 }
 </style>
